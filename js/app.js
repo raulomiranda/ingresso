@@ -13,27 +13,19 @@ function comprar() {
     let tipoIngresso = document.getElementById(`tipo-ingresso`).value;
     let quantidade = document.querySelector(`input`).value;
 
-    if (tipoIngresso == `pista`, pista > 0){
-        
+    if (tipoIngresso == `pista` && pista > 0){
         pista = pista - quantidade;
         pistaQuantidade.innerHTML = pista;
-    }else{
-        alert(`Os ingressos de pista se esgotaram`);    
-    }
-    
-    if(tipoIngresso == `superior`, superior > 0){
+    } else if (tipoIngresso == `superior` && superior > 0){
         superior = superior - quantidade;
         superiorQuantidade.innerHTML = superior;
-    }else{
-        alert(`Os ingressos de superior se esgotaram`);
-    }
-
-    if(tipoIngresso == `inferior`, inferior > 0){
+    } else if (tipoIngresso == `inferior` && inferior > 0){
         inferior = inferior - quantidade;
         inferiorQuantidade.innerHTML = inferior;
-    }else{
-        alert(`Os ingressos de inferior se esgotaram`)
+    } else {
+        alert(`Os ingressos para o setor ${tipoIngresso} se esgotaram`);
     }
+
     console.log(`Você comprou ${quantidade} de ${tipoIngresso}`);
 
     console.log(pista)
