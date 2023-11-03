@@ -25,10 +25,4 @@ function comprar() {
     } else {
         alert(`Os ingressos para o setor ${tipoIngresso} se esgotaram`);
     }
-
-    console.log(`Você comprou ${quantidade} de ${tipoIngresso}`);
-
-    console.log(pista)
-    quantidade = 0;
-    document.querySelector(`input`).value = ``;
 }
